@@ -1,3 +1,30 @@
-<p>
-  cars-component works!
-</p>
+<table class="table table">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Mark</th>
+    <th>Model</th>
+    <th>Year</th>
+    <th>Max Speed</th>
+    <th>Is Authomatic</th>
+    <th>Engine</th>
+    <th>Number of doors</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let car of cars">
+    <td>{{ car.id }}</td>
+    <td>{{ car.mark | uppercase }}</td>
+    <td>{{ car.model | uppercase }}</td>
+    <td>{{ car.year }}</td>
+    <td>{{ car.maxSpeed }}</td>
+    <td>{{ car.isAuthomatic }}</td>
+    <td>{{ car.engine }}</td>
+    <td>{{ car.numberOfDoors }}</td>
+    <td>
+      <button class="btn btn-danger"
+        (click)="removeContact(contact)">
+        X
+      </button>
+    </td>
+  </tr>
+</table>
