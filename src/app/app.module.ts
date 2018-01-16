@@ -8,13 +8,15 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { CarsComponentComponent } from './components/cars-component/cars-component.component';
 import { AppRoutingModule } from './app-routing.module'
 import { CarServiceService } from './services/car-service.service';
+import { CarFormComponentComponent } from './car-form-component/car-form-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    CarsComponentComponent
+    CarsComponentComponent,
+    CarFormComponentComponent
   ],
   imports: [
     BrowserModule,
