@@ -57,5 +57,8 @@ export class CarServiceService {
   getCars(){
     return this.cars
   }
-
+  public addCar(newCar) {
+    this.cars.push(newCar);
+    this.cars.id++;
+  }
 }

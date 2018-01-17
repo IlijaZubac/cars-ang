@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+ 
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -9,6 +9,7 @@ import { CarsComponentComponent } from './components/cars-component/cars-compone
 import { AppRoutingModule } from './app-routing.module'
 import { CarServiceService } from './services/car-service.service';
 import { CarFormComponentComponent } from './car-form-component/car-form-component.component';
+
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { CarFormComponentComponent } from './car-form-component/car-form-compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   
+ 
      
   ],
   providers: [CarServiceService],

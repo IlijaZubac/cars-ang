@@ -1,40 +1,54 @@
-<form>
-  <label>Id</label>
-  <input name='id' type='text'/>
-  <label> Mark</label>
-  <input name= 'mark' type= 'text'/>
-  <label>Model</label>
-  <input name= 'model' type= 'text'/>
-  <label>Year</label>
-  <select>
-    <option name= 'year' value='1990'>1990</option>
-    <option name= 'year' value='1991'>1991</option>
-    <option name= 'year' value='1992'>1992</option>
-    <option name= 'year' value='1993'>1993</option>
-    <option name= 'year' value='1994'>1994</option>
-    <option name= 'year' value='1995'>1995</option>
-    <option name= 'year' value='1996'>1996</option>
-    <option name= 'year' value='1997'>1997</option>
-    <option name= 'year' value='1998'>1998</option>
-    <option name= 'year' value='1999'>1999</option>
-    <option name= 'year' value='2000'>2000</option>
-    <option name= 'year' value='2001'>2001</option>
-    <option name= 'year' value='2002'>2002</option>
-    <option name= 'year' value='2003'>2003</option>
-    <option name= 'year' value='2004'>2004</option>
-    <option name= 'year' value='2005'>2005</option>
-    <option name= 'year' value='2006'>2006</option>
-    <option name= 'year' value='2007'>2007</option>
-    <option name= 'year' value='2009'>2009</option>
-    <option name= 'year' value='2010'>2010</option>
-    <option name= 'year' value='2011'>2011</option>
-    <option name= 'year' value='2012'>2012</option>
-    <option name= 'year' value='2013'>2013</option>
-    <option name= 'year' value='2014'>2014</option>
-    <option name= 'year' value='2015'>2015</option>
-    <option name= 'year' value='2016'>2016</option>
-    <option name= 'year' value='2017'>2017</option>
-    <option name= 'year' value='2018'>2018</option>
-  </select>
+<form (ngSubmit)="submitCar"(newCar)>
+  <div type="form-group">
+      <label for="mark">Mark</label>
+      <input name="mark" type="text" [(ngModule)]="newCar.mark"/>
+  </div>
 
+  <div type="form-group">
+      <label for="model" type="text">Model</label>
+      <input name="model" type="text" [(ngModule)]="newCar.model"/>
+  </div>
+
+  <div type="form-group">
+    <label name="year">Year</label>
+      <select name="year" [(ngModule)]="newCar.year">
+        <options *ngFor="let year as years" [value]="year">{{year}}</options>
+      </select> 
+  </div>
+
+  <div type="form-group">
+    <label name="maxSpeed">Maximal Speed </label>
+    <input name="maxSpeed" type="number" [(ngModule)]="newCar.naxSpeed"/>
+  </div>
+
+  <div type="form-group">
+    <label name="isAuthomatic">Is Authomatic</label>
+    <input name="isAuthomatic" type="checkbox" [(ngModule)]="newCar.isAuthomatic"/>
+  </div>
+
+  <div type="form-group">
+    <label name="engine">Engine</label>
+    <label>
+        <input name="engine" type="ratio" [(ngModule)]="newCar.engine"/>
+        Diesel
+    </label>
+    <label>
+        <input name="engine" type="ratio" [(ngModule)]="newCar.engine"/>
+        Hybrid
+    </label>
+    <label>
+        <input name="engine" type="ratio" [(ngModule)]="newCar.engine"/>
+        Petrol
+    </label>
+    <label>
+        <input name="engine" type="ratio" [(ngModule)]="newCar.engine"/>
+        Electric
+    </label>
+  </div>
+
+  <div type="form-grop">
+    <label name="numberOfDoors">Number of doors</label>
+      <input name="numberOfDoors" type="number" [(ngModule)]="newCar.numberOfDoor"/>
+  </div>
+  
 </form>
